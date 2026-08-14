@@ -1,0 +1,191 @@
+/**
+ * 简约专业 · Editorial 全局样式
+ * --------------------------------------------------
+ * 配合 HomeShowcase.vue 的 Swiss Design 风格：
+ *  1. 引入 editorial 字体（Fraunces 衬线 + IBM Plex Sans/Mono）
+ *  2. 隐藏 VitePress 默认 Home/Hero/Features
+ *  3. 全局平滑滚动 + 直角滚动条
+ *  4. 文本选中色
+ */
+
+/* ---- 1. Editorial 字体 ---- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+/* ---- 2. 全局平滑滚动（锚点跳转体验） ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- 4. 首页容器：移除 VitePress 默认 Home 页面留白，让自定义组件贴边全屏展示 ---- */
+.VPHome {
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+.VPHome .container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* 隐藏默认 hero / features 区块（由 HomeShowcase 接管） */
+.VPHero,
+.VPFeatures,
+.VPHomeFeatures {
+  display: none;
+}
+
+/* 隐藏 VitePress 默认的文档翻页导航（项目详情页由自定义 ProjectPrevNext 接管） */
+.VPDocFooter .prev-next {
+  display: none !important;
+}
+
+/* ---- 5. 圆润滚动条（与圆润设计语言一致） ---- */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 140, 0.3);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 140, 0.5);
+    background-clip: content-box;
+    border: 2px solid transparent;
+  }
+}
+
+/* ---- 6. 首页自定义组件确保宽度 100% ---- */
+.hs-root {
+  width: 100%;
+  display: block;
+}
+
+/* ---- 7. 文本选中颜色（克制品牌色） ---- */
+::selection {
+  background: rgba(0, 70, 255, 0.18);
+  color: inherit;
+}
+
+/* ---- 8. 导航栏：搜索框加宽 + 移到导航菜单前面（靠右） ---- */
+.VPNavBar .content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+.VPNavBarSearch {
+  order: -1 !important;
+  padding-right: 8px;
+}
+.DocSearch-Button {
+  min-width: 220px;
+  padding: 0 12px !important;
+}
+
+/* ---- 9. 隐藏移动端导航的主题切换开关 ---- */
+.VPNavScreenAppearance {
+  display: none !important;
+}
+
+/* ---- 9b. 社交链接自定义 SVG：强制 fill:none（VitePress 默认 fill:currentColor 会把圆形填实） ---- */
+.VPSocialLink svg {
+  fill: none !important;
+}
+
+/* ---- 菜单 + 通知栏：弹性布局组成固定头部组 ---- */
+/* 菜单 order:-1 排在最前，通知栏在其后 */
+/* 菜单 sticky top:0，通知栏 sticky top:64px，一起固定在顶部 */
+.Layout > .VPNav {
+  order: -1;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 31;
+  background-color: var(--vp-c-bg) !important;
+}
+/* 菜单不透明背景：覆盖 vitepress 默认在桌面端 ≥960px 的 transparent 分支 */
+/* 包括 .VPNavBar:not(.home) 透明 / .home.top 时 .content-body 透明 等所有情况 */
+.Layout > .VPNav .VPNavBar,
+.Layout > .VPNav .VPNavBar.home,
+.Layout > .VPNav .VPNavBar.home.top,
+.Layout > .VPNav .VPNavBar:not(.home),
+.Layout > .VPNav .VPNavBar:not(.has-sidebar):not(.home.top),
+.Layout > .VPNav .VPNavBar .content,
+.Layout > .VPNav .VPNavBar .content-body,
+.Layout > .VPNav .VPNavBar .title,
+.Layout > .VPNav .VPNavBar .wrapper,
+.Layout > .VPNav .VPNavBar .container {
+  background-color: var(--vp-c-bg) !important;
+  transition: none !important;
+}
+.layout-top {
+  background-color: var(--vp-c-bg) !important;
+}
+.Layout > .nb-root {
+  order: 0;
+  position: sticky;
+  top: 64px;
+  z-index: 30;
+  /* 不透明暖色背景：既防止滚动内容透出，又与白底页面形成对比增强边界感 */
+  background-color: #fff7ed !important;
+}
+.Layout > .nb-root .nb-inner {
+  background-color: #fff7ed !important;
+}
+/* 有通知栏时，锚点跳转偏移 = 菜单64 + 通知栏50 = 114px */
+html:has(body.has-nb) {
+  scroll-padding-top: 114px;
+}
+
+/* ---- 核心修复：移除 VitePress 为 fixed header 预留的补偿空间 ---- */
+/* 因为我们把 VPNav 改成了 sticky（在文档流中），它已经自然占据了空间 */
+/* 1. VPContent 的 padding-top（默认 64px） */
+.VPContent {
+  padding-top: 0 !important;
+  margin: 0 !important;
+}
+/* 2. VPLocalNav 的 padding-top（默认 var(--vp-layout-top-height)） */
+.VPLocalNav {
+  padding-top: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
+/* 3. VPSidebar 的 padding-top（默认 var(--vp-nav-height)） */
+.VPSidebar {
+  padding-top: 0 !important;
+}
+/* 4. 无侧栏时 VPLocalNav 的 fixed 类也处理掉 */
+@media (min-width: 960px) {
+  .VPLocalNav:not(.has-sidebar) {
+    top: 0 !important;
+  }
+  /* 无侧栏页面放宽内容区宽度（默认 752px 太窄，无法展示大框卡片） */
+  .VPDoc:not(.has-sidebar) .container {
+    max-width: 1200px !important;
+  }
+  .VPDoc:not(.has-sidebar) .content {
+    max-width: 100% !important;
+  }
+}
+
+/* 通知栏暗色模式适配 */
+.dark .nb-root {
+  background-color: #1c1714 !important;
+  border-bottom-color: rgba(255, 159, 10, 0.25) !important;
+  color: #f0c060 !important;
+}
+.dark .nb-root .nb-inner {
+  background-color: #1c1714 !important;
+}
+.dark .nb-root .nb-link {
+  color: #e8a830 !important;
+}
+.dark .nb-root .nb-link:hover {
+  color: #ffb733 !important;
+  background: rgba(255, 159, 10, 0.12);
+}
