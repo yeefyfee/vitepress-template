@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import { data } from '../../../projects/index.data'
+import { data } from '@root/projects/index.data'
 
 /* ============================================================
  * HomeShowcase —— 丝滑滚动 · 去卡片化

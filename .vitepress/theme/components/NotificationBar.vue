@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
       </svg>
       <!-- 文字区域：超长时滚动显示 -->
       <div ref="textWrapEl" class="nb-text-wrap">
-        <span ref="textEl" class="nb-text">{{ notification.text }}</span>
+        <span ref="textEl" class="nb-text"><a :href="notification.link" target="_blank" rel="noopener noreferrer">{{ notification.text }}</a></span>
       </div>
       <!-- 链接：固定最右侧，双箭头 + 左右摆动动画 -->
       <a v-if="notification.link" :href="notification.link" class="nb-link" :aria-label="notification.linkText ?? '查看详情'">

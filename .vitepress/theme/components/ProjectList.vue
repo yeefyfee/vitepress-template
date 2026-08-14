@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { data } from '../../../projects/index.data'
+import { computed } from 'vue'
+import { data } from '@root/projects/index.data'
 
-const { posts } = data
+// data 是 ContentLoader 返回的响应式对象，posts 在加载完成前可能为 undefined
+const posts = computed(() => data?.posts ?? [])
 
 /* 无封面时用纯色占色块，基于标题 hash 选取首页配色方案中的纯色 */
 const solidColors = [

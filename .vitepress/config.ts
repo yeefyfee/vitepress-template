@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { fileURLToPath, URL } from 'node:url'
 
 // 站点配置：所有导航/侧边栏在此集中维护
 // 维护者：通常只需改 siteTitle、nav、sidebar 即可调整站点结构
@@ -12,14 +13,24 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/icon.png' }]
   ],
 
+  // Vite 配置：添加项目根目录 alias，避免 Windows 相对路径跨盘符解析 bug
+  vite: {
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('.', import.meta.url)),
+        '@root': fileURLToPath(new URL('../', import.meta.url))
+      }
+    }
+  },
+
   // 主题配置：沿用默认主题，仅做内容注入与样式覆盖
   themeConfig: {
     siteTitle: '首页',
 
     // 全站通知栏：有内容时在 header 下方显示，空则不显示
     notification: {
-      text: '🎉 新项目案例已上线，涵盖前端工程、数据看板、个人门户等方向。',
-      link: '/notifications/20260814-launch',
+      text: '🎉 粉丝活动：小红书点赞+关注，评论私信我完成超低价私人站点接单！',
+      link: '/notifications/20260814-fans',
       linkText: '立即查看'
     },
 

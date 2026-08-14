@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vitepress'
-import { data } from '../../../projects/index.data'
+import { data } from '@root/projects/index.data'
 
 const route = useRoute()
 
