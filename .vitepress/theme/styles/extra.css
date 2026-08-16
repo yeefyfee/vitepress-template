@@ -189,3 +189,32 @@ html:has(body.has-nb) {
   color: #ffb733 !important;
   background: rgba(255, 159, 10, 0.12);
 }
+
+/* ---- 导航：压缩菜单项间距 + 强制单行，防止 WordPress 菜单项加入后中等屏幕下换行走两行 ---- */
+/* （导航一旦两行，64px 高度假设失效 → Hero 首屏 calc 溢出 & 通知栏 sticky 错位） */
+.VPNavBarMenu {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;           /* 默认 22px 太宽，收窄避免 项目/WordPress/联系/关于 换行 */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.VPNavBarMenu .menu-link,
+.VPNavBarMenu .VPFlyout > button {
+  padding: 4px 10px !important;       /* 原 VitePress 默认 padding 偏大，收窄 */
+  font-size: 14px !important;
+  white-space: nowrap !important;
+}
+/* 桌面端 ≥960px 时容器允许略小一点也不挤 */
+@media (min-width: 960px) and (max-width: 1200px) {
+  .VPNavBar .container {
+    padding: 0 16px !important;
+  }
+  .DocSearch-Button {
+    min-width: 160px !important;
+  }
+}
+/* 防止社交链接把导航挤变形 */
+.VPSocialLinks {
+  flex-shrink: 0 !important;
+}

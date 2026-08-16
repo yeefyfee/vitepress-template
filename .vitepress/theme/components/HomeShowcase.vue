@@ -51,11 +51,11 @@ onUnmounted(() => cleanupReveal?.())
 
       <div class="hs-hero-inner">
         <h1 class="hs-reveal hs-hero-name">
-          Theo
+          软件开发, 项目承接, 一站式服务
         </h1>
 
         <p class="hs-reveal hs-hero-title">
-          全栈工程师 · <em>产品设计</em> · 系统架构
+          你好，我是Theo，全栈工程师 · <em>产品设计</em> · 系统架构
         </p>
 
         <p class="hs-reveal hs-hero-tagline">
@@ -64,7 +64,7 @@ onUnmounted(() => cleanupReveal?.())
         </p>
 
         <!-- 统计：一行展示，数字带颜色 -->
-        <div class="hs-reveal hs-hero-stats">
+        <div class="hs-reveal hs-hero-stats"  style="display: none;">
           <div class="hs-stat">
             <span class="hs-stat-n">10+</span>
             <span class="hs-stat-l">年经验</span>
@@ -76,7 +76,7 @@ onUnmounted(() => cleanupReveal?.())
           </div>
         </div>
 
-        <div class="hs-reveal hs-hero-actions">
+        <div class="hs-reveal hs-hero-actions" style="display: none;">
           <a href="/projects/" class="hs-btn hs-btn-primary">
             <span>查看作品</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
@@ -195,7 +195,18 @@ onUnmounted(() => cleanupReveal?.())
             <span class="hs-marquee-name">社区建设</span>
           </div>
 
-          <!-- 复制一组（8项）用于无缝循环 -->
+          <div class="hs-marquee-item">
+            <div class="hs-skill-icon hs-skill-icon-wordpress">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="32" cy="32" r="22"/>
+                <path d="M14 32c0-7 5-13 11-14 2 0 5 3 7 8 1-3 4-6 6-6 4 1 7 6 7 12 0 2-1 5-3 8 1-1 3-4 4-5 1 3-1 9-2 11-1 3-2 5-6 6-2-4-4-9-6-13-1 3-2 7-2 10 0 3-1 5-2 6-5 0-10-5-11-11-1-2-1-4-1-6z"/>
+                <path d="M26 24c2 5 4 10 6 18M34 24c-1 4-2 9-2 16M44 28c-3 4-6 9-8 15" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="hs-marquee-name">WordPress建站</span>
+          </div>
+
+          <!-- 复制一组（9项）用于无缝循环 -->
           <div class="hs-marquee-item" aria-hidden="true">
             <div class="hs-skill-icon hs-skill-icon-frontend">
               <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
@@ -290,11 +301,71 @@ onUnmounted(() => cleanupReveal?.())
             </div>
             <span class="hs-marquee-name">社区建设</span>
           </div>
+
+          <div class="hs-marquee-item" aria-hidden="true">
+            <div class="hs-skill-icon hs-skill-icon-wordpress">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="32" cy="32" r="22"/>
+                <path d="M14 32c0-7 5-13 11-14 2 0 5 3 7 8 1-3 4-6 6-6 4 1 7 6 7 12 0 2-1 5-3 8 1-1 3-4 4-5 1 3-1 9-2 11-1 3-2 5-6 6-2-4-4-9-6-13-1 3-2 7-2 10 0 3-1 5-2 6-5 0-10-5-11-11-1-2-1-4-1-6z"/>
+                <path d="M26 24c2 5 4 10 6 18M34 24c-1 4-2 9-2 16M44 28c-3 4-6 9-8 15" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="hs-marquee-name">WordPress建站</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ======================= 3. Service 服务保障 & Slogan ======================= -->
+    <!-- ======================= 3. WP 建站核心流程 · 5 步 ======================= -->
+    <section id="wp-flow" class="hs-section">
+      <div class="hs-section-head hs-section-head-left">
+        <h2 class="hs-reveal hs-section-title">
+          外贸独立站<span class="hs-accent">建站核心流程</span>
+        </h2>
+        <p class="hs-reveal hs-section-sub">
+          从域名选购、VPS 或 WordPress 主机选型，到一键部署、页面设计、SEO 上线与日常运维——每一步都配有可直接落地的图文教程。
+        </p>
+      </div>
+
+      <div class="hs-flow">
+        <!-- Step 1 -->
+        <div class="hs-reveal hs-flow-step">
+          <div class="hs-flow-num">1</div>
+          <div class="hs-flow-line"></div>
+          <h4>注册域名</h4>
+          <p>后缀对比、注册商选择、DNS 解析策略、备案流程与常见坑位梳理。</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="hs-reveal hs-flow-step">
+          <div class="hs-flow-num">2</div>
+          <div class="hs-flow-line"></div>
+          <h4>选型主机</h4>
+          <p>按预算与目标地区匹配：WordPress 托管主机、国外 VPS、阿里云 / 腾讯云性能对比与配置。</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="hs-reveal hs-flow-step">
+          <div class="hs-flow-num">3</div>
+          <div class="hs-flow-line"></div>
+          <h4>部署网站</h4>
+          <p>一键安装 / 手动部署 / VPS 面板 / Docker 方案全覆盖，附常见报错定位与处理手册。</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="hs-reveal hs-flow-step">
+          <div class="hs-flow-num">4</div>
+          <div class="hs-flow-line"></div>
+          <h4>设计页面</h4>
+          <p>主题选型与定制，Gutenberg、Elementor、Block Editor 区块搭建，输出精致品牌站 / DTC 独立站。</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="hs-reveal hs-flow-step">
+          <div class="hs-flow-num">5</div>
+          <h4>上线运营</h4>
+          <p>SSL 配置、备份策略、安全加固、SEO 优化、数据统计埋点与内容更新节奏。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 4. Service 服务保障 & Slogan ======================= -->
     <section class="hs-section hs-service">
       <!-- Slogan：大字排版区，无卡片，用渐变文字与分割线 -->
       <div class="hs-reveal hs-slogan">
@@ -378,7 +449,7 @@ onUnmounted(() => cleanupReveal?.())
       </div>
     </section>
 
-    <!-- ======================= 4. Contact 联系方式 ======================= -->
+    <!-- ======================= 5. Contact 联系方式 ======================= -->
     <section id="contact" class="hs-section">
       <div class="hs-section-head">
         <h2 class="hs-reveal hs-section-title">
@@ -471,17 +542,20 @@ onUnmounted(() => cleanupReveal?.())
 }
 
 /* ============================================================
- * 1. Hero
+ * 1. Hero — 严格一屏显示（无滚动也能看到：名称/身份/标语/统计/按钮）
  * ============================================================ */
 .hs-hero {
   position: relative;
-  min-height: calc(100vh - 114px);
+  /* 100dvh 替代 100vh，兼容移动浏览器地址栏动态高度；
+     减去 120px ≈ 导航 64 + 通知栏 50 + 少量安全边距，比原先写死 -114 更保险 */
+  min-height: calc(65dvh - 120px);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
-  /* 顶部用紧凑 padding 代替垂直居中：内容紧贴通知栏下方，无大片空白 */
-  padding: 60px 24px 100px;
+  /* 顶部 / 底部 padding 大幅收紧：为"一屏"腾空间，不再让按钮排到屏幕外 */
+  padding: 40px 24px 48px;
+  box-sizing: border-box;
 }
 .hs-hero-bg {
   position: absolute;
@@ -534,8 +608,9 @@ onUnmounted(() => cleanupReveal?.())
   position: relative;
   z-index: 1;
   text-align: left;
-  max-width: 640px;
-  padding-left: 8%;
+  max-width: 880px;
+  padding-left: 6%;
+  width: 100%;
 }
 .hs-hero-tag {
   display: inline-flex;
@@ -564,9 +639,10 @@ onUnmounted(() => cleanupReveal?.())
   50% { box-shadow: 0 0 0 8px rgba(48, 209, 88, 0.05); }
 }
 
+/* 名称、身份、标语的垂直间距全部收窄（原 32/20/44 → 现 20/12/24），为"一屏"腾空间 */
 .hs-hero-name {
-  margin: 32px 0 14px;
-  font-size: clamp(42px, 10vw, 70px);
+  margin: 80px 0 44px;
+  font-size: clamp(32px, 7.2vw, 56px);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.02;
@@ -576,8 +652,8 @@ onUnmounted(() => cleanupReveal?.())
   -webkit-text-fill-color: transparent;
 }
 .hs-hero-title {
-  margin: 0 0 20px;
-  font-size: clamp(18px, 2.2vw, 26px);
+  margin: 0 0 12px;
+  font-size: clamp(16px, 2vw, 22px);
   font-weight: 500;
   color: var(--hs-color-fg-2);
   letter-spacing: -0.01em;
@@ -588,27 +664,28 @@ onUnmounted(() => cleanupReveal?.())
   font-weight: 600;
 }
 .hs-hero-tagline {
-  margin: 0 auto 44px;
-  max-width: 580px;
-  font-size: clamp(15px, 1.6vw, 18px);
-  line-height: 1.7;
+  margin: 0 0 24px;
+  max-width: 560px;
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.6;
   color: var(--hs-color-fg-3);
 }
 
+/* 间距收紧：不再让 actions 撑大 68px 的底部空间，保证首屏可见 */
 .hs-hero-actions {
   display: inline-flex;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 68px;
+  margin-bottom: 0;     /* 一屏情况下，actions 就是最底部元素，不需要额外下边距 */
 }
 .hs-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 28px;
+  padding: 12px 24px;     /* 14/28 → 12/24 收一圈 */
   border-radius: 999px;
-  font-size: 15px;
+  font-size: 14px;       /* 15 → 14 一屏更紧凑 */
   font-weight: 500;
   text-decoration: none;
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -640,12 +717,13 @@ onUnmounted(() => cleanupReveal?.())
   transform: translateY(-2px);
 }
 
-/* 统计：一行内联展示，数字带颜色 */
+/* 统计：一行内联展示，数字带颜色；全部尺寸收紧一圈，保持一屏 */
 .hs-hero-stats {
   display: flex;
   align-items: baseline;
-  gap: 24px;
-  margin-bottom: 44px;
+  gap: 20px;
+  margin-bottom: 28px;     /* 44 → 28，多腾 16px 给 actions 不溢出 */
+  flex-wrap: wrap;
 }
 .hs-stat {
   display: inline-flex;
@@ -653,7 +731,7 @@ onUnmounted(() => cleanupReveal?.())
   gap: 6px;
 }
 .hs-stat-n {
-  font-size: 26px;
+  font-size: 24px;           /* 26 → 24 */
   font-weight: 700;
   letter-spacing: -0.02em;
   background: linear-gradient(120deg, var(--hs-color-accent), var(--hs-color-accent-2));
@@ -662,7 +740,7 @@ onUnmounted(() => cleanupReveal?.())
   -webkit-text-fill-color: transparent;
 }
 .hs-stat-l {
-  font-size: 14px;
+  font-size: 13px;           /* 14 → 13 */
   color: var(--hs-color-fg-3);
 }
 .hs-stat-sep {
@@ -677,7 +755,7 @@ onUnmounted(() => cleanupReveal?.())
  * ============================================================ */
 .hs-section {
   position: relative;
-  padding: 140px 24px;
+  padding: 120px 0px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -788,9 +866,69 @@ onUnmounted(() => cleanupReveal?.())
 .hs-skill-icon-ai          { background: linear-gradient(135deg, #5e5ce622, #5e5ce60a); color: #5e5ce6; }
 .hs-skill-icon-chat        { background: linear-gradient(135deg, #bf5af222, #bf5af20a); color: #bf5af2; }
 .hs-skill-icon-community   { background: linear-gradient(135deg, #00b4d822, #00b4d80a); color: #00b4d8; }
+.hs-skill-icon-wordpress   { background: linear-gradient(135deg, #21759b22, #21759b0a); color: #21759b; }
 
 /* ============================================================
- * 3. Service & Slogan
+ * 3. WP 建站 5 步流程
+ * ============================================================ */
+.hs-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  position: relative;
+}
+.hs-flow-step {
+  position: relative;
+  padding: 0 12px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.hs-flow-step:last-child { padding-right: 0; }
+.hs-flow-num {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: var(--hs-color-bg-2);
+  border: 1px solid var(--hs-color-line);
+  color: var(--hs-color-fg);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.hs-flow-step:nth-child(1) .hs-flow-num { background: linear-gradient(135deg, #0a84ff, #0a84ff); color: #fff; border-color: transparent; box-shadow: 0 10px 30px -10px rgba(10,132,255,.45); }
+.hs-flow-step:nth-child(2) .hs-flow-num { background: linear-gradient(135deg, #30d158, #30d158); color: #fff; border-color: transparent; box-shadow: 0 10px 30px -10px rgba(48,209,88,.45); }
+.hs-flow-step:nth-child(3) .hs-flow-num { background: linear-gradient(135deg, #ff9f0a, #ff9f0a); color: #fff; border-color: transparent; box-shadow: 0 10px 30px -10px rgba(255,159,10,.45); }
+.hs-flow-step:nth-child(4) .hs-flow-num { background: linear-gradient(135deg, #5e5ce6, #5e5ce6); color: #fff; border-color: transparent; box-shadow: 0 10px 30px -10px rgba(94,92,230,.45); }
+.hs-flow-step:nth-child(5) .hs-flow-num { background: linear-gradient(135deg, #21759b, #21759b); color: #fff; border-color: transparent; box-shadow: 0 10px 30px -10px rgba(33,117,155,.45); }
+.hs-flow-line {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 0;
+  height: 1px;
+  background:
+    linear-gradient(90deg, var(--hs-color-line) 0%, var(--hs-color-line) calc(100% - 8px), transparent 100%);
+}
+.hs-flow-step:last-child .hs-flow-line { display: none; }
+.hs-flow-step h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--hs-color-fg);
+}
+.hs-flow-step p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--hs-color-fg-2);
+}
+
+/* ============================================================
+ * 4. Service & Slogan
  * ============================================================ */
 .hs-service {
   display: grid;
@@ -944,7 +1082,11 @@ onUnmounted(() => cleanupReveal?.())
  * Responsive
  * ============================================================ */
 @media (max-width: 860px) {
-  .hs-hero { padding: 60px 20px 80px; }
+  /* 移动端也严格一屏，使用 dvh，顶部底部更紧凑 */
+  .hs-hero {
+    min-height: calc(100dvh - 120px);
+    padding: 28px 20px 36px;
+  }
   .hs-hero-inner { padding-left: 0; }
   .hs-hero-stats { gap: 16px; flex-wrap: wrap; }
   .hs-stat-n { font-size: 22px; }
@@ -957,8 +1099,19 @@ onUnmounted(() => cleanupReveal?.())
   .hs-skill-icon { width: 60px; height: 60px; border-radius: 18px; }
   .hs-skill-icon svg { width: 32px; height: 32px; }
   .hs-marquee-name { font-size: 13px; }
+  /* WP 建站流程：移动端 2 列 + 最后一项占满 */
+  .hs-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+  .hs-flow-step { padding-right: 0; }
+  .hs-flow-line { display: none; }
+  .hs-flow-step:last-child { grid-column: span 2; max-width: calc(50% - 10px); }
+  .hs-flow-num { margin-bottom: 20px; }
 }
 @media (max-width: 480px) {
+  .hs-flow { grid-template-columns: 1fr; }
+  .hs-flow-step:last-child { grid-column: auto; max-width: none; }
   .hs-hero-stats { gap: 12px; }
   .hs-guarantee { gap: 16px; }
   .hs-contact-item { gap: 16px; }

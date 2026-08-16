@@ -1,0 +1,1289 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAISON NOIR — Quiet Luxury, Worn Daily</title>
+<meta name="description" content="MAISON NOIR designs considered wardrobe staples in natural fabrics. Timeless silhouettes, honest prices, made to last. FW26 Collection now available." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f1ea;
+    --paper-2: #ece5d9;
+    --ink: #1c1714;
+    --ink-soft: #5c5147;
+    --muted: #998c7e;
+    --line: rgba(28,23,20,0.1);
+    --line-strong: rgba(28,23,20,0.18);
+    --accent: #5e4532;   /* espresso */
+    --accent-2: #8a6a4b; /* whiskey */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+  .container {
+    width: min(1320px, 94vw);
+    margin-inline: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+  .serif em { font-style: italic; }
+
+  /* ---------- ANNOUNCE ---------- */
+  .announce {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    padding: 12px 20px;
+  }
+  .announce span { color: var(--accent-2); margin: 0 14px; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+  }
+  .nav-top-links { display: flex; gap: 28px; }
+  .nav-top-links a:hover { color: var(--ink); }
+  .nav-top-links a { transition: color .2s ease; }
+  .currency { display: flex; align-items: center; gap: 8px; }
+  .nav-main {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 22px 0;
+  }
+  .nav-cat {
+    display: flex;
+    gap: 36px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .nav-cat a {
+    position: relative;
+    transition: color .2s ease, padding-left .2s ease;
+  }
+  .nav-cat a:hover { color: var(--accent-2); padding-left: 4px; }
+  .nav-right {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-right a, .nav-right button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    transition: color .2s ease;
+  }
+  .nav-right a:hover, .nav-right button:hover { color: var(--accent-2); }
+  .nav-right svg { width: 20px; height: 20px; stroke: currentColor; }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.32em;
+    text-align: center;
+    padding-left: 0.32em;
+  }
+  .brand small {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    font-weight: 400;
+    padding-left: 0.5em;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  /* ---------- HERO EDITORIAL ---------- */
+  .hero {
+    padding: 60px 0 120px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: end;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    width: 52px;
+    height: 1px;
+    background: var(--accent-2);
+  }
+  h1.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 112px);
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  h1.hero-title em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 300;
+  }
+  h1.hero-title .line-2 {
+    padding-left: 30%;
+    display: block;
+  }
+  h1.hero-title .line-3 {
+    padding-left: 14%;
+    display: block;
+  }
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    max-width: 420px;
+    margin-bottom: 40px;
+  }
+  .hero-cta-row {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: transform .2s ease, padding-left .2s ease, background .25s ease, color .25s ease;
+  }
+  .btn:hover { padding-left: 38px; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-ghost {
+    border-bottom: 1px solid var(--ink);
+    padding: 8px 4px;
+  }
+  .btn-ghost:hover { padding-left: 8px; }
+
+  .hero-img {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) contrast(1.02) brightness(1.02);
+  }
+  .hero-caption {
+    position: absolute;
+    bottom: 32px; left: -52px;
+    background: var(--paper);
+    padding: 22px 28px;
+    border: 1px solid var(--line-strong);
+    max-width: 280px;
+  }
+  .hero-caption small {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .hero-caption h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .hero-caption span { font-size: 12px; color: var(--ink-soft); }
+
+  .hero-meta {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .hero-meta div strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .hero-meta div span {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section { padding: 120px 0; position: relative; border-top: 1px solid var(--line); }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-label::before {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: var(--accent-2);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 820px;
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-lead {
+    max-width: 520px;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .section-head {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+
+  /* ---------- LOOKBOOK (asymmetrical) ---------- */
+  .lookbook {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 28px;
+  }
+  .lk {
+    overflow: hidden;
+    position: relative;
+    transition: filter .4s ease;
+  }
+  .lk img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .lk:hover img { transform: scale(1.04); }
+  .lk-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    background: linear-gradient(180deg, transparent 45%, rgba(28,23,20,0.55) 100%);
+    color: var(--paper);
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+  .lk:hover .lk-overlay { opacity: 1; }
+  .lk-overlay small {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+  .lk-overlay h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.2;
+    max-width: 280px;
+  }
+  .lk-overlay span {
+    margin-top: 14px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .lk-1 { grid-column: span 7; aspect-ratio: 4/5; }
+  .lk-2 { grid-column: span 5; aspect-ratio: 1; margin-top: 80px; }
+  .lk-3 { grid-column: span 5; aspect-ratio: 1; margin-top: -60px; }
+  .lk-4 { grid-column: span 4; aspect-ratio: 3/4; }
+  .lk-5 { grid-column: span 3; aspect-ratio: 2/3; margin-top: 40px; }
+  .lk-6 { grid-column: span 7; aspect-ratio: 16/9; margin-top: -20px; }
+
+  /* ---------- EDITORIAL SPLIT ---------- */
+  .editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: center;
+  }
+  .ed-photo { aspect-ratio: 5/6; overflow: hidden; }
+  .ed-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9); }
+  .ed-quote .section-title { font-size: clamp(36px, 4.2vw, 56px); margin-bottom: 32px; }
+  .ed-quote p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    max-width: 460px;
+  }
+  .ed-sign {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .ed-sign .mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 34px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .ed-sign strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .ed-sign span {
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- PRODUCT RAIL ---------- */
+  .product-rail-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+  }
+  .shop-filters {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .shop-filters button {
+    padding: 10px 18px;
+    border: 1px solid var(--line-strong);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    transition: all .2s ease;
+  }
+  .shop-filters button.active, .shop-filters button:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .shop-card {
+    background: var(--paper);
+    padding: 20px 20px 28px;
+    position: relative;
+    transition: background .25s ease;
+  }
+  .shop-card:hover { background: var(--paper-2); }
+  .shop-card-img {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .shop-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .shop-card:hover .shop-card-img img { transform: scale(1.05); }
+  .shop-tag {
+    position: absolute;
+    top: 14px; left: 14px;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 10px;
+  }
+  .shop-tag.new { background: var(--accent); }
+  .shop-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .shop-card-cat {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .shop-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shop-price {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .shop-price s { color: var(--muted); font-weight: 300; margin-right: 8px; font-size: 13px; }
+  .shop-swatches {
+    display: flex;
+    gap: 5px;
+  }
+  .swatch {
+    width: 14px; height: 14px;
+    border: 1px solid var(--line-strong);
+  }
+
+  /* ---------- EDITORIAL STORY ---------- */
+  .story {
+    background: var(--paper-2);
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .story-col h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 16px;
+  }
+  .story-col h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .story-col h3 em { font-style: italic; color: var(--accent); }
+  .story-col p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .story-img { aspect-ratio: 3/4; overflow: hidden; margin-top: 12px; }
+  .story-img.mid { margin-top: 80px; }
+  .story-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.85);
+    transition: transform .8s ease;
+  }
+  .story-img:hover img { transform: scale(1.03); }
+
+  /* ---------- NEWSLETTER ---------- */
+  .news {
+    padding: 140px 0;
+    text-align: center;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .news .container { max-width: 700px; }
+  .news .section-label { color: var(--accent-2); }
+  .news .section-label::before { background: var(--accent-2); }
+  .news h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 20px 0 24px;
+  }
+  .news h2 em {
+    font-style: italic;
+    color: var(--accent-2);
+    font-weight: 300;
+  }
+  .news p {
+    color: rgba(245,241,234,0.7);
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 520px;
+    margin: 0 auto 44px;
+  }
+  .news-form {
+    display: flex;
+    max-width: 520px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(245,241,234,0.3);
+    padding-bottom: 2px;
+  }
+  .news-form input {
+    flex: 1;
+    background: none;
+    border: 0;
+    outline: 0;
+    padding: 16px 12px;
+    color: var(--paper);
+    font: inherit;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+  .news-form input::placeholder { color: rgba(245,241,234,0.4); }
+  .news-form button {
+    background: none;
+    border: 0;
+    color: var(--accent-2);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: gap .2s ease, color .2s ease;
+  }
+  .news-form button:hover { gap: 18px; color: var(--paper); }
+  .news-form button svg {
+    width: 18px; height: 18px; stroke: currentColor;
+  }
+  .news small {
+    display: block;
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(245,241,234,0.45);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--paper); border-top: 1px solid var(--line); }
+  .footer-top {
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1.3fr repeat(4, 1fr);
+    gap: 60px;
+  }
+  .foot-brand .brand {
+    font-size: 28px;
+    letter-spacing: 0.3em;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .foot-brand .brand small { text-align: left; }
+  .foot-brand p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    max-width: 300px;
+  }
+  .foot-col h6 {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .foot-col a {
+    font-size: 13px;
+    color: var(--ink);
+    transition: color .2s ease, padding-left .2s ease;
+  }
+  .foot-col a:hover { color: var(--accent-2); padding-left: 4px; }
+  .footer-bottom {
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-bottom .social {
+    display: flex;
+    gap: 22px;
+  }
+  .footer-bottom .social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color .2s ease;
+  }
+  .footer-bottom .social a:hover { color: var(--ink); }
+  .social svg { width: 14px; height: 14px; stroke: currentColor; }
+
+  /* ---------- REVEAL ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .9s cubic-bezier(0.22, 1, 0.36, 1),
+                transform .9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1080px) {
+    .nav-main { grid-template-columns: 1fr; gap: 20px; padding: 20px 0; }
+    .nav-cat { justify-content: center; }
+    .nav-right { justify-content: center; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-caption { position: static; margin-top: 20px; }
+    h1.hero-title .line-2 { padding-left: 15%; }
+    h1.hero-title .line-3 { padding-left: 5%; }
+    .hero-meta { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .shop-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr 1fr; }
+    .foot-brand { grid-column: span 3; }
+  }
+  @media (max-width: 768px) {
+    section { padding: 72px 0; }
+    .section-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 52px; }
+    .lookbook { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .lk-1, .lk-2, .lk-3, .lk-4, .lk-5, .lk-6 {
+      grid-column: span 1; margin: 0; aspect-ratio: 3/4;
+    }
+    .lk-1 { grid-column: span 2; aspect-ratio: 16/10; }
+    .editorial { grid-template-columns: 1fr; gap: 40px; }
+    .story-grid { grid-template-columns: 1fr; gap: 40px; }
+    .story-img.mid { margin-top: 0; }
+    .shop-filters { justify-content: flex-start; margin-top: 20px; }
+    .product-rail-head { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .foot-brand { grid-column: span 2; }
+    .nav-top { display: none; }
+    .nav-cat { gap: 20px; font-size: 11px; }
+    .nav-cat a:nth-child(n+5) { display: none; }
+  }
+  @media (max-width: 480px) {
+    .shop-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .foot-brand { grid-column: auto; }
+    .hero-meta { grid-template-columns: 1fr 1fr; gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  FW26 COLLECTION NOW LIVE<span>·</span> Complimentary Shipping on Orders Over $180<span>·</span> 30-Day Returns
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-top">
+      <div class="nav-top-links">
+        <a href="#">Stores</a>
+        <a href="#">Stockists</a>
+        <a href="#">Journal</a>
+      </div>
+      <div class="currency">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M3 12h18"/>
+          <path d="M12 3a15 15 0 0 1 0 18"/>
+          <path d="M12 3a15 15 0 0 0 0 18"/>
+        </svg>
+        USD · Worldwide Shipping
+      </div>
+      <div class="nav-top-links">
+        <a href="#">Account</a>
+        <a href="#">Sign in</a>
+      </div>
+    </div>
+    <div class="nav-main">
+      <div class="nav-cat">
+        <a href="#shop">New</a>
+        <a href="#shop">Women</a>
+        <a href="#shop">Men</a>
+        <a href="#shop">Outerwear</a>
+        <a href="#shop">Archive</a>
+        <a href="#journal">Journal</a>
+      </div>
+      <a href="#" class="brand">
+        MAISON NOIR
+        <small>Atelier · Est. MMXIX</small>
+      </a>
+      <div class="nav-right">
+        <button aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          Search
+        </button>
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 7H4l2-7z"/><path d="M6 10v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10"/><circle cx="9" cy="20" r="1"/><circle cx="15" cy="20" r="1"/></svg>
+          Bag (2)
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- HERO -->
+<header class="container hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow reveal">FW 26 · Volume 04</div>
+      <h1 class="hero-title reveal">
+        <span class="line-1">A wardrobe,</span>
+        <span class="line-2"><em>not a trend.</em></span>
+        <span class="line-3">Still dressed.</span>
+      </h1>
+      <p class="hero-lead reveal">
+        Considered staples cut from Italian wools, Japanese denims, and French linen.
+        Garments made to be worn — today, next year, a decade on.
+      </p>
+      <div class="hero-cta-row reveal">
+        <a href="#shop" class="btn btn-primary">
+          Shop Collection
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#story" class="btn btn-ghost">
+          Read the Journal
+        </a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="hero-img">
+        <img src="product-1.jpg" alt="FW26 Campaign" />
+        <div class="hero-caption">
+          <small>The Editorial</small>
+          <h4>— "Clothes that earn their place in the closet."</h4>
+          <span>p. 012 · Quiet Luxury Issue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-meta reveal">
+    <div><strong>24</strong><span>New Pieces</span></div>
+    <div><strong>100%</strong><span>Natural Fibers</span></div>
+    <div><strong>Italy · JP</strong><span>Milled &amp; Sewn</span></div>
+    <div><strong>10 Yrs</strong><span>Built to Last</span></div>
+  </div>
+</header>
+
+<!-- LOOKBOOK -->
+<section id="lookbook">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-label">01 · The Lookbook</div>
+        <h2 class="section-title">Shot in the <em>7th arrondissement.</em></h2>
+      </div>
+      <p class="section-lead">
+        Photographed by Léa Marchand over three Parisian mornings.
+        FW26 silhouettes against slate rooftops, rain-warmed stone, and quiet café interiors.
+      </p>
+    </div>
+    <div class="lookbook">
+      <div class="lk lk-1 reveal">
+        <img src="product-2.jpg" alt="Trench coat look"/>
+        <div class="lk-overlay">
+          <small>Look 01 · p.014</small>
+          <h5>The Tailored Trench in Midnight Wool</h5>
+          <span>Le Marais · 8:42 AM</span>
+        </div>
+      </div>
+      <div class="lk lk-2 reveal">
+        <img src="product-3.jpg" alt="Loafers detail"/>
+        <div class="lk-overlay">
+          <small>Detail</small>
+          <h5>Vermont Loafer in Ivory Calf</h5>
+          <span>Hand-stitched in Veneto</span>
+        </div>
+      </div>
+      <div class="lk lk-3 reveal">
+        <img src="product-4.jpg" alt="Menswear portrait"/>
+        <div class="lk-overlay">
+          <small>Look 12 · p.028</small>
+          <h5>Cashmere Knitwear &amp; Archive Flannel</h5>
+          <span>Librairie · 11:07 AM</span>
+        </div>
+      </div>
+      <div class="lk lk-4 reveal">
+        <img src="product-5.jpg" alt="Silk skirt"/>
+        <div class="lk-overlay">
+          <small>Look 07</small>
+          <h5>Bias-Cut Slip Skirt in Bordeaux</h5>
+          <span>Saint-Germain</span>
+        </div>
+      </div>
+      <div class="lk lk-5 reveal">
+        <img src="product-6.jpg" alt="Accessories flat lay"/>
+        <div class="lk-overlay">
+          <small>Accessories</small>
+          <h5>Small Leather Goods &amp; Scarves</h5>
+          <span>FW26 Curated</span>
+        </div>
+      </div>
+      <div class="lk lk-6 reveal">
+        <img src="product-1.jpg" alt="Wide editorial"/>
+        <div class="lk-overlay">
+          <small>Cover Story</small>
+          <h5>A Return to the <em>Considered</em> Wardrobe</h5>
+          <span>The FW26 Editorial in Full</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL SPLIT -->
+<section id="story">
+  <div class="container editorial">
+    <div class="ed-photo reveal">
+      <img src="product-2.jpg" alt="Artisan at work" />
+    </div>
+    <div class="ed-quote reveal">
+      <div class="section-label">02 · Crafted, Not Manufactured</div>
+      <h2 class="section-title">
+        Fourteen mills.<br/>
+        <em>One standard.</em>
+      </h2>
+      <p>
+        Every MAISON NOIR garment begins the same way — at a family-run mill we've partnered with for years.
+        Biella for wools, Okayama for denims, Normandy for linens. We don't chase seasons or reorders;
+        we buy exactly what our artisans can produce at their best pace.
+      </p>
+      <p>
+        The result is a smaller, more honest collection. Pieces that arrive when they're ready,
+        priced closer to what it costs to make them, built to wear beautifully as they age.
+      </p>
+      <div class="ed-sign">
+        <div class="mark">G.L.</div>
+        <div>
+          <strong>Genevieve Laurent</strong>
+          <span>Founder &amp; Creative Director</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT RAIL -->
+<section id="shop">
+  <div class="container">
+    <div class="product-rail-head reveal">
+      <div>
+        <div class="section-label">03 · Shop FW26</div>
+        <h2 class="section-title">The <em>Current</em> Collection</h2>
+      </div>
+      <div class="shop-filters">
+        <button class="active">All</button>
+        <button>Outerwear</button>
+        <button>Knitwear</button>
+        <button>Tops</button>
+        <button>Bottoms</button>
+        <button>Accessories</button>
+      </div>
+    </div>
+    <div class="shop-grid">
+      <!-- CARD 1 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <span class="shop-tag new">New</span>
+          <img src="product-3.jpg" alt="Cashmere coat"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Outerwear · Women</span>
+          <div class="shop-card-name">The Sinclair Coat — Camel</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$1,290</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#c19a6b"></span>
+              <span class="swatch" style="background:#1c1714"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 2 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <img src="product-4.jpg" alt="Cashmere sweater"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Knitwear · Unisex</span>
+          <div class="shop-card-name">Cashmere Crew — Ivory</div>
+          <div class="shop-card-row">
+            <div class="shop-price"><s>$420</s>$336</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#f5f1ea"></span>
+              <span class="swatch" style="background:#5c5147"></span>
+              <span class="swatch" style="background:#1c1714"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 3 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <span class="shop-tag">FW26</span>
+          <img src="product-5.jpg" alt="Selvedge denim"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Bottoms · Men</span>
+          <div class="shop-card-name">Selvedge Straight Jean — Charcoal</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$320</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#3a3a44"></span>
+              <span class="swatch" style="background:#1c1c2e"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 4 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <img src="product-6.jpg" alt="Leather bag"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Accessories</span>
+          <div class="shop-card-name">The Petit Saddle — Whiskey</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$680</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#8a6a4b"></span>
+              <span class="swatch" style="background:#1c1714"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 5 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <span class="shop-tag new">New</span>
+          <img src="product-1.jpg" alt="Silk slip skirt"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Skirts · Women</span>
+          <div class="shop-card-name">Bias Silk Midi — Bordeaux</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$490</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#6b1f2e"></span>
+              <span class="swatch" style="background:#1c1714"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 6 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <img src="product-2.jpg" alt="Poplin shirt"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Tops · Unisex</span>
+          <div class="shop-card-name">Signature Poplin Shirt — White</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$230</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#ffffff"></span>
+              <span class="swatch" style="background:#c7c0b4"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 7 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <img src="product-3.jpg" alt="Leather loafer"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Footwear · Women</span>
+          <div class="shop-card-name">The Vermont Loafer — Ivory</div>
+          <div class="shop-card-row">
+            <div class="shop-price">$540</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#f0ead6"></span>
+              <span class="swatch" style="background:#1c1714"></span>
+              <span class="swatch" style="background:#8a6a4b"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 8 -->
+      <div class="shop-card reveal">
+        <div class="shop-card-img">
+          <span class="shop-tag">Archive</span>
+          <img src="product-4.jpg" alt="Field jacket"/>
+        </div>
+        <div>
+          <span class="shop-card-cat">Outerwear · Men</span>
+          <div class="shop-card-name">Archive Field Shirt — Olive</div>
+          <div class="shop-card-row">
+            <div class="shop-price"><s>$620</s>$434</div>
+            <div class="shop-swatches">
+              <span class="swatch" style="background:#4a4d3d"></span>
+              <span class="swatch" style="background:#5c5147"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY 3 COL -->
+<section class="story" id="journal">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="section-label">04 · The Journal</div>
+        <h2 class="section-title">Stories from <em>the atelier &amp; beyond.</em></h2>
+      </div>
+      <p class="section-lead">
+        Essays on craftsmanship, closet philosophy, slow travel, and the people who make our pieces.
+        Published when ready — never on a calendar.
+      </p>
+    </div>
+    <div class="story-grid">
+      <div class="story-col reveal">
+        <h5>Essay · 8 min read</h5>
+        <h3>On the <em>Perfect White</em> Shirt</h3>
+        <p>A meditation on the garment that sees us through every major occasion — and why, after 212 prototypes, we finally put ours into production.</p>
+        <p>Spoiler: it has less to do with thread count, and everything to do with the shoulder.</p>
+        <div class="story-img">
+          <img src="product-5.jpg" alt="White shirt atelier"/>
+        </div>
+      </div>
+      <div class="story-col reveal">
+        <div class="story-img mid">
+          <img src="product-6.jpg" alt="Travel journal"/>
+        </div>
+        <h5>Travel · 12 min read</h5>
+        <h3>Five Days, <em>One Suitcase.</em></h3>
+        <p>A packing philosophy honed over twelve years of business trips and long weekends away. Three knits, two shirts, one trouser, one coat — worn in rotation for a full Tuscan wedding weekend.</p>
+      </div>
+      <div class="story-col reveal">
+        <h5>Craft · 6 min read</h5>
+        <h3>A Day at <em>Mill Number 7.</em></h3>
+        <p>We spend a day with the Rinaldi family, whose mill in Biella has been carding and spinning virgin wool since the summer of 1948. Four generations, one loom room, no shortcuts.</p>
+        <p>"The wool remembers," Francesco tells us. "You cannot rush good cloth."</p>
+        <div class="story-img">
+          <img src="product-1.jpg" alt="Mill worker"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="container reveal">
+    <div class="section-label">Join the Circle</div>
+    <h2>Letters from <em>the Atelier.</em></h2>
+    <p>
+      A quiet note from Genevieve, once a month. New collections before the world,
+      private archive releases, and thoughtful essays on dressing well for a long life.
+    </p>
+    <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('small').textContent='Thank you — please check your inbox.';">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">
+        Subscribe
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <small>Unsubscribe anytime. We send only what we'd want to receive.</small>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="foot-brand">
+        <a href="#" class="brand">
+          MAISON NOIR
+          <small>Atelier · Est. MMXIX</small>
+        </a>
+        <p>An independent house designing quiet, considered wardrobe staples. Shipping from our Paris atelier to 42 countries — with care, and always carbon-neutral.</p>
+      </div>
+      <div class="foot-col">
+        <h6>Shop</h6>
+        <ul>
+          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#shop">Women</a></li>
+          <li><a href="#shop">Men</a></li>
+          <li><a href="#shop">Accessories</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Client Care</h6>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Care &amp; Repair</a></li>
+          <li><a href="#">Alterations</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>The House</h6>
+        <ul>
+          <li><a href="#">About MAISON NOIR</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Flagship Stores</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Follow</h6>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Spotify</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© MMXXVI MAISON NOIR — All rights reserved · Made in EU &amp; JP</div>
+      <div class="social">
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          IG
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          PIN
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 13v4"/></svg>
+          TT
+        </a>
+      </div>
+      <div>Privacy · Terms · Cookies · Accessibility</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 8) * 45 + 'ms';
+    io.observe(el);
+  });
+  // shop filters toggle
+  document.querySelectorAll('.shop-filters button').forEach((b) => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.shop-filters button').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

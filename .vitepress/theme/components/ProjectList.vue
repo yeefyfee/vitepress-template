@@ -37,7 +37,7 @@ function formatDate(d?: string) {
   <div class="pl-root">
     <!-- 页面标题区 -->
     <header class="pl-header">
-      <h1 class="pl-page-title">交付案例</h1>
+      <h1 class="pl-page-title">成品交付案例</h1>
       <p class="pl-page-desc">已经完成交付的项目汇总，按时间倒序排列</p>
     </header>
 
@@ -57,6 +57,7 @@ function formatDate(d?: string) {
             :src="post.frontmatter.cover"
             :alt="post.frontmatter.title"
             class="pl-cover-img"
+            loading="lazy"
           />
           <div
             v-else
@@ -107,7 +108,7 @@ function formatDate(d?: string) {
 
 .pl-page-title {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-size: clamp(2.4rem, 5vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -171,15 +172,18 @@ function formatDate(d?: string) {
 }
 
 .pl-cover-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .pl-card:hover .pl-cover-img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .pl-cover-fallback {

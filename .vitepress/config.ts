@@ -5,8 +5,8 @@ import { fileURLToPath, URL } from 'node:url'
 // 维护者：通常只需改 siteTitle、nav、sidebar 即可调整站点结构
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'hi 欢迎来到这里',
-  description: 'theo的个人站点，10年职业开发，端到端交付',
+  title: '打工人的独立站，职业开发，端到端交付',
+  description: 'theo的个人站点',
 
   // 站点标识（public/logo.svg）
   head: [
@@ -25,7 +25,7 @@ export default defineConfig({
 
   // 主题配置：沿用默认主题，仅做内容注入与样式覆盖
   themeConfig: {
-    siteTitle: '首页',
+    siteTitle: '打工人的独立站',
 
     // 全站通知栏：有内容时在 header 下方显示，空则不显示
     notification: {
@@ -34,9 +34,11 @@ export default defineConfig({
       linkText: '立即查看'
     },
 
-    // 顶部导航
+    // 顶部导航：项目 → WordPress → 联系 → 关于
+    // 说明：WordPress 与项目页同UI同展示逻辑，进入 /wordpress/ 后用卡片列出模板
     nav: [
       { text: '项目', link: '/projects/' },
+      { text: 'WordPress', link: '/wordpress/' },
       { text: '联系', link: '/#contact' },
       { text: '关于', link: '/about' }
     ],
