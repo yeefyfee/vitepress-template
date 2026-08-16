@@ -37,7 +37,7 @@ export default defineConfig({
     // 顶部导航：项目 → WordPress → 联系 → 关于
     // 说明：WordPress 与项目页同UI同展示逻辑，进入 /wordpress/ 后用卡片列出模板
     nav: [
-      { text: '项目', link: '/projects/' },
+      // { text: '项目', link: '/projects/' },
       { text: 'WordPress', link: '/wordpress/' },
       { text: '联系', link: '/#contact' },
       { text: '关于', link: '/about' }
